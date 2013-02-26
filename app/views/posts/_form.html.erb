@@ -2,7 +2,8 @@
   <%= f.input :title %>
   <%= f.input :excerpt %>
   <%= f.input :body %>
-  <%= f.input :author_id %>
+  <%= f.association :author %>
+  <%= f.association :categories, :as => :check_boxes %>
   <div class="form-actions">
     <%= f.button :submit, :class => 'btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
