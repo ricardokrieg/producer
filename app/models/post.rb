@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-	
+
   attr_accessible :body, :excerpt, :title, :author_id, :category
   validates_presence_of :title, :excerpt, :body, :author
   validates_associated :author
